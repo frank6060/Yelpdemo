@@ -10,7 +10,6 @@ end
 gem 'rails', '~> 5.0.2'
 gem 'coffee-script-source', '1.8.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -46,5 +45,17 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'sqlite3'
+end
+
+group :production do
+  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :jruby]
