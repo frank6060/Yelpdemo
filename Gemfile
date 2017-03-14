@@ -8,6 +8,7 @@ end
 
 gem 'rails', '~> 5.0.2'
 gem "fog-aws"
+gem 'devise'
 gem "mini_magick"
 gem 'coffee-script-source', '1.8.0'
 
