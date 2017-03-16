@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :reviews
   devise_for :users
-  resources :restaurants
+  resources :restaurants do
+  	resources :reviews, expect: [:show, :index]
+  end
   get 'pages/about'
 
   get 'pages/contact'
